@@ -41,8 +41,8 @@ export default function Home() {
   // Job list component
   let jobsHTML = jobs.map((job) => {
     return (
-    <ul>
-    <li key={job.id}><span><Link href={`/job/${job}`}>{job.name}</Link></span></li>
+    <ul key={job.id}>
+    <li><span><Link href={`/job/${job.id}`}>{job.name}</Link></span></li>
     <li><span>{job.start} - {job.end}</span></li>
     </ul>);
   });

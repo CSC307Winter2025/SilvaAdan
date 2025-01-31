@@ -17,9 +17,7 @@ model Job {
   id          Int   @id @default(autoincrement())
   title       String
   company     String
-  start   String
-  end     String
+  start       DateTime @db.Date
+  end         DateTime @db.Date
   description String
-
-  @@index([start])
 }

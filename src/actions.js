@@ -7,8 +7,8 @@ export async function saveJobEntry(data) {
     const job = {
         title: data.get('title'),
         company: data.get('company'),
-        start: data.get('start'),
-        end: data.get('end'),
+        start: new Date(data.get('start')).toISOString(),
+        end: new Date(data.get('end')).toISOString(),
         description: data.get('description'),
     }
     

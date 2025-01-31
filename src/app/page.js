@@ -5,7 +5,13 @@ import { saveJobEntry } from "@/actions";
 
 export default async function Home() {
   // Job list
-  const jobsList = await prisma.job.findMany();
+  const jobsList = await prisma.job.findMany({
+    orderBy: [
+      {
+        start: "desc",
+      },
+    ],
+  });
 
   // Job list HTML
   let jobsHTML = jobsList.map((job) => <JobEntry job={job} key={job.id}></JobEntry>);
@@ -41,10 +47,10 @@ export default async function Home() {
           <input type="text" name="company" />
           <br />
           <label>Start Date</label>
-          <input type="text" name="start" />
+          <input type="date" name="start" />
           <br />
           <label>End Date</label>
-          <input type="text" name="end" />
+          <input type="date" name="end" />
           <br />
           <label>Description</label>
           <input type="text" name="description"/>

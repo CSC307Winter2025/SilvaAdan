@@ -9,22 +9,34 @@ export default function Home() {
     organization: "Cal Poly SLO",
     start: "March 2024",
     end: "Present",
-    description: "test"
+    description: "Use Splunk to monitor and analyze network traffic, investigate security incidents, and respond to alerts. Collaborate with the security team to develop and implement security policies and procedures. Conduct vulnerability assessments and penetration tests to identify and remediate security risks. Assist with security awareness training and incident response exercises."
   }, {
     id: 2,
     name: "Cybersecurity Intern",
     organization: "NGHTWLL Consulting LLC",
     start: "January 2024",
     end: "Present",
-    description: "test"
+    description: "Conduct security assessments and penetration tests to identify vulnerabilities in clients' systems, networks, and applications. Develop and implement security policies, procedures, and controls to protect clients' data and assets. Monitor and analyze security events and incidents to detect and respond to threats. Assist with security awareness training and incident response exercises."
   }, {
     id: 3,
     name: "FRC Software Lead",
     organization: "FRC Team 3512",
     start: "June 2022",
     end: "June 2023",
-    description: "test"
+    description: "Worked with a team of students to design, build, and program a robot to compete in the FIRST Robotics Competition. Led the software team in developing code for the robot's autonomous and teleoperated modes. Collaborated with other team members to integrate sensors, actuators, and other hardware components into the robot's control system. Participated in regional and national competitions, where the team won several awards for its robot design and performance."
   }];
+
+  // Add a new job to the list
+  function addJob(name, organization, start, end, description) {
+    let newJob = {
+      id: jobs.length + 1,
+      name: name,
+      organization: organization,
+      start: start,
+      end: end,
+      description: description
+    };
+  }
 
   // Job list component
   let jobsHTML = jobs.map((job) => {
@@ -62,7 +74,7 @@ export default function Home() {
         <li>Operating Systems</li>
         <li>Networking</li>
         <li>Centralized Services Administration</li>
-        <li>Vulnerability Assessment</li>
+        <li>Vulnerability Assessment</li> 
         <li>Security Engineering</li>
         <li>Information Technology</li>
         <li>Ethical Hacking</li>

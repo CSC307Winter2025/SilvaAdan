@@ -2,6 +2,40 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  // Job list
+  let jobs = [{
+    id: 1,
+    name: "Jr. SOC Analyst Student Assistant",
+    organization: "Cal Poly SLO",
+    start: "March 2024",
+    end: "Present",
+    description: "test"
+  }, {
+    id: 2,
+    name: "Cybersecurity Intern",
+    organization: "NGHTWLL Consulting LLC",
+    start: "January 2024",
+    end: "Present",
+    description: "test"
+  }, {
+    id: 3,
+    name: "FRC Software Lead",
+    organization: "FRC Team 3512",
+    start: "June 2022",
+    end: "June 2023",
+    description: "test"
+  }];
+
+  // Job list component
+  let jobsHTML = jobs.map((job) => {
+    return (
+    <ul>
+    <li key={job.id}><span><Link href={`/job/${job.id}`}>{job.name}</Link></span></li>
+    <li><span>{job.start} - {job.end}</span></li>
+    </ul>);
+  });
+
+  // Page source code
   return (
     <div>
       <h1><b>Adan Silva&apos;s Resume</b></h1>
@@ -21,7 +55,7 @@ export default function Home() {
           <li><b>Penetration Testing Framework</b> A comprehensive penetration testing framework that automates and streamlines the process of identifying vulnerabilities in systems, networks, and applications. It also features a suite of tools and modules designed to simulate real-world cyberattacks, allowing security professionals to assess the robustness of their defenses.</li>
       </ul>
       <h2><b>Work Experience</b></h2>
-      <p>WORK IN PROGRESS. come back later</p>
+      {jobsHTML}
       <h2><b>My Skills</b></h2>
       <ul>
         <li>Security Operations</li>

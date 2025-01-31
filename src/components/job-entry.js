@@ -5,7 +5,7 @@ export default function JobEntry({ job }) {
 
     return (
         <ul>
-            <li><span><Link href={link}>{job.name}</Link></span></li>
+            <li><span><Link href={link}>{job.title}</Link></span></li>
             <li><span>{job.start} - {job.end}</span></li>
         </ul>
     )

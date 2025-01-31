@@ -4,7 +4,7 @@ import prisma from './lib/prisma';
 import {redirect} from 'next/navigation';
 
 export async function saveJobEntry(data) {
-    const jobEntry = {
+    const job = {
         title: data.get('title'),
         company: data.get('company'),
         start: data.get('start'),
@@ -12,6 +12,6 @@ export async function saveJobEntry(data) {
         description: data.get('description'),
     }
     
-    await prisma.jobEntry.create({data: job});
+    await prisma.job.create({data: job});
     redirect('/');
 }

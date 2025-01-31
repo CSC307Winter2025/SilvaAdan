@@ -16,9 +16,9 @@ export default async function Home() {
       <h1><b>Adan Silva&apos;s Resume</b></h1>
       <h2><b>Contact Information</b></h2>
       <ul>
-        <li><b>Email:</b> <Link href="mailto:adan.t.silva77@gmail.com">adan.t.silva77@gmail.com</Link></li>
-        <li><b>GitHub Username:</b> <Link href="https://github.com/secmancer">secmancer</Link></li>
-        <li><b>LinkedIn Username:</b> <Link href="https://www.linkedin.com/in/adan-silva-secmancer/">adan-silva-secmancer</Link></li>
+        <li><b>Email:</b>adan.t.silva77@gmail.com</li>
+        <li><b>GitHub Username:</b>secmancer</li>
+        <li><b>LinkedIn Username:</b>adan-silva-secmancer</li>
       </ul>
       <h2><b>My Projects</b></h2>
       <ul>
